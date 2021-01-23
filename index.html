@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">World</a>
+            <div class="toggle"></div>
+        </header>
+    <img src="bg.jpg" alt="bgImg" class="bg">
+    <img src="bird.png" alt="bgImg" class="bird">
+    <div class="content">
+        <h2>We can save The <br><span>Earth</span></h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit
+             Asperiores ullam dolores sapiente illo quam incidunt et 
+             deleniti rerum mollitia voluptates ut, molestiae, suscipit 
+             dolorem voluptate itaque corporis quia harum sunt.
+        </p>
+            <a href="#">Join Us</a>
+    </div>.
+    <ul class="sci">
+        <li><a href="#"><img src="facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        <li><a href="#"><img src="instagram.png" alt=""></a></li>
+    </ul>
+    <div class="textBlocks">
+        <div class="block">
+            <h3>Defenders of Earth</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatem corrupti recusandae laudantium minus dicta aspernatur, 
+                veniam, nostrum incidunt quibusdam consequuntur adipisci commodi 
+                nemo quisquam dolores? In, non officiis. Eos, nulla.
+            </p>
+        </div>
+        <div class="block">
+            <h3>How to save water</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptatem corrupti recusandae laudantium minus dicta aspernatur, 
+                veniam, nostrum incidunt quibusdam consequuntur adipisci commodi 
+                nemo quisquam dolores? In, non officiis. Eos, nulla.
+            </p>
+        </div>
+    </div>
+    </section>
+    <script type="text/javascript">
+        let scrollPos = 0;
+        document.addEventListener("wheel", (e)=>{
+            const bg = document.querySelector('.bg');
+            const bird = document.querySelector('.bird');
+            const content = document.querySelector('.content');
+            scrollPos = window.scrollY;
+            if (scrollPos<=216){
+                bg.style.width =  100 +scrollPos/50 + '%';
+                bg.style.eight =  100 +scrollPos/50 + '%';
+    
+    
+                bird.style.right =  100 +scrollPos*7/2 + 'px';
+                content.style.left =  100 +scrollPos*7/2 + 'px';
+            }
+            // bg.style.width =  100 +e.pageX/100 + '%';
+            // bg.style.eight =  100 +e.pageX/100 + '%';
+
+
+            // bird.style.right =  100 +e.pageX/2 + 'px';
+            // content.style.left =  100 +e.pageX/2 + 'px';
+
+            
+        });
+    </script>   
+</body>
+</html>
